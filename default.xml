@@ -2,7 +2,16 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com" />
+
+  <remote  name="friendly-arm"
+           fetch="https://github.com/friendlyarm"
+           revision="refs/heads/s5p4418-lollipop-mr1" />
+
+  <remote  name="nanopi3-dev"
+           fetch="https://github.com/nanopi3-dev"
+           revision="refs/heads/aosp-5.1" />
+
   <default revision="refs/tags/android-5.1.1_r6"
            remote="aosp"
            sync-j="4" />
@@ -282,8 +291,6 @@
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" />
-  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -292,7 +299,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs" />
@@ -306,7 +312,6 @@
   <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs" />
   <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
-  <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs" />
   <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
@@ -319,7 +324,6 @@
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs" />
   <project path="hardware/akm" name="platform/hardware/akm" />
-  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" groups="intel" />
   <project path="hardware/intel/bootstub" name="platform/hardware/intel/bootstub" groups="intel" />
@@ -398,7 +402,6 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
@@ -489,13 +492,11 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
-  <project path="system/vold" name="platform/system/vold" groups="pdk" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
   <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" />
@@ -510,5 +511,27 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
+
+  <!-- FriendlyARM additions -->
+  <project path="hardware/samsung_slsi/slsiap" name="android_hardware_samsung_slsi_slsiap" remote="friendly-arm" groups="slsiap" />
+  <project path="vendor/broadcom/nanopi2" name="android_vendor_broadcom_nanopi2" remote="friendly-arm" revision="refs/heads/nanopi2-lollipop-mr1" />
+  <project path="vendor/friendly-arm/build" name="android_vendor_friendly-arm_build" remote="friendly-arm" revision="refs/heads/nanopi2-lollipop-mr1" groups="nanopi2" />
+  <project path="vendor/friendly-arm/apps" name="android_vendor_friendly-arm_apps" remote="friendly-arm" revision="refs/heads/nanopi2-lollipop-mr1" />
+  <project path="vendor/nexell/s5p6818" name="nexell_platform_s5p6818" remote="friendly-arm" revision="refs/heads/nanopi3-lollipop-mr1" />
+  <project path="vendor/nexell/apps" name="android_vendor_nexell_apps" remote="friendly-arm" />
+
+  <!-- FriendlyARM modifications, rebased by nanopi3-dev -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="nanopi3-dev" groups="pdk" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="nanopi3-dev" groups="pdk-cw-fs" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="nanopi3-dev" groups="pdk" />
+  <project path="frameworks/opt/net/ethernet" name="android_frameworks_opt_net_ethernet" remote="nanopi3-dev" />
+  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="nanopi3-dev" groups="pdk" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="nanopi3-dev" />
+  <project path="system/core" name="android_system_core" remote="nanopi3-dev" groups="pdk" />
+  <project path="system/vold" name="android_system_vold" remote="nanopi3-dev" groups="pdk" />
+
+  <!-- nanopi3-dev -->
+  <project path="device/friendly-arm/nanopi3" name="android_device_friendly-arm_nanopi3" remote="nanopi3-dev" groups="device,nanopi3" />
+  <project path="vendor/friendly-arm/nanopi3" name="android_vendor_friendly-arm_nanopi3" remote="nanopi3-dev" groups="nanopi3" />
 
 </manifest>
