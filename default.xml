@@ -484,7 +484,6 @@
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
 
   <!-- FriendlyARM additions -->
-  <project path="hardware/samsung_slsi/slsiap" name="android_hardware_samsung_slsi_slsiap" remote="friendly-arm" groups="slsiap" />
   <project path="vendor/broadcom/nanopi2" name="android_vendor_broadcom_nanopi2" remote="friendly-arm" revision="refs/heads/nanopi2-lollipop-mr1" />
   <project path="vendor/friendly-arm/build" name="android_vendor_friendly-arm_build" remote="friendly-arm" revision="refs/heads/nanopi2-lollipop-mr1" groups="nanopi2" />
   <project path="vendor/friendly-arm/apps" name="android_vendor_friendly-arm_apps" remote="friendly-arm" revision="refs/heads/nanopi2-lollipop-mr1" />
@@ -495,6 +494,7 @@
   <project path="frameworks/av" name="android_frameworks_av" remote="nanopi3-dev" groups="pdk" />
   <project path="frameworks/base" name="android_frameworks_base" remote="nanopi3-dev" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/native" name="android_frameworks_native" remote="nanopi3-dev" groups="pdk" />
+  <project path="hardware/samsung_slsi/slsiap" name="android_hardware_samsung_slsi_slsiap" remote="nanopi3-dev" groups="slsiap" />
   <project path="system/core" name="android_system_core" remote="nanopi3-dev" groups="pdk" />
   <project path="system/media" name="android_system_media" remote="nanopi3-dev" groups="pdk" />
 
