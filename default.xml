@@ -525,7 +525,6 @@
 <!-- END AOSP -->
 
 <!-- BEGIN FRIENDLYARM -->
-  <project path="hardware/samsung_slsi/slsiap" name="friendlyarm/android_hardware_samsung_slsi_slsiap" revision="s5p4418-lollipop-mr1" groups="slsiap" />
   <project path="vendor/broadcom/nanopi2" name="friendlyarm/android_vendor_broadcom_nanopi2" revision="nanopi2-lollipop-mr1" />
   <project path="vendor/friendly-arm/apps" name="friendlyarm/android_vendor_friendly-arm_apps" revision="nanopi2-lollipop-mr1" />
   <project path="vendor/nexell/s5p6818" name="friendlyarm/nexell_platform_s5p6818" revision="nanopi3-lollipop-mr1" />
@@ -533,6 +532,8 @@
 <!-- END FRIENDLYARM -->
 
 <!-- BEGIN NANOPI3-DEV -->
+  <project path="hardware/samsung_slsi/slsiap" name="nanopi3-dev/android_hardware_samsung_slsi_slsiap" groups="slsiap" />
+
   <project path="vendor/friendly-arm/build" name="nanopi3-dev/android_vendor_friendly-arm_build" groups="nanopi3" />
   <project path="device/friendly-arm/nanopi3" name="nanopi3-dev/android_device_friendly-arm_nanopi3" groups="nanopi3,device" />
   <project path="vendor/friendly-arm/nanopi3" name="nanopi3-dev/android_vendor_friendly-arm_nanopi3" groups="nanopi3" />
