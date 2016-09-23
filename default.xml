@@ -527,7 +527,6 @@
 <!-- BEGIN FRIENDLYARM -->
   <project path="vendor/broadcom/nanopi2" name="friendlyarm/android_vendor_broadcom_nanopi2" revision="nanopi2-lollipop-mr1" />
   <project path="vendor/nexell/s5p6818" name="friendlyarm/nexell_platform_s5p6818" revision="nanopi3-lollipop-mr1" />
-  <project path="vendor/nexell/apps" name="friendlyarm/android_vendor_nexell_apps" revision="s5p4418-lollipop-mr1" />
 <!-- END FRIENDLYARM -->
 
 <!-- BEGIN NANOPI3-DEV -->
